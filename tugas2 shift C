@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <conio.h>
+
+main()
+{
+    int pilih;
+    float r, t, vol, luas, sisi;
+    ulang:
+    printf("\n======================================\n");
+    printf(" PILIH MENU DIBAWAH INI : \n");
+    printf("1. Menghitung volume kubus\n");
+    printf("2. Menghitung luas lingkaran\n");
+    printf("3. Menghitung volume silinder\n\n");
+    printf("Pilihan : ");
+    scanf("%d", &pilih);
+        if(pilih>3)
+        printf("MAAF KODE YANG ANDA MASUKAN SALAH\n");
+    switch(pilih)
+    {
+    case 1:
+    printf("~~~~MENGHITUNG VOLUME KUBUS~~~~\n");
+    printf("Masukan sisi kubus : ");
+    scanf("%f", &sisi);
+    vol=sisi*sisi*sisi;
+    printf("Hasilnya = %.0f", vol);
+    break;
+        case 2:
+        printf("~~~~MENGHITUNG LUAS LINGKARAN~~~~\n");
+        printf("Masukan jari-jari lingkaran : ");
+        scanf("%f", &r);
+        luas=3.14*r*r;
+        printf("Hasilnya = %.2f", luas);
+        break;
+            case 3:
+            printf("~~~~MENGHITUNG VOLUME SILINDER~~~~\n");
+            printf("Masukan jari-jari silinder : ");
+            scanf("%f", &r);
+            printf("Masukan tinggi silinder : ");
+            scanf("%f", &t);
+            vol=3.14*r*r*t;
+            printf("Hasilnya = %.2f", vol);
+            break;
+    }
+    goto ulang;
+}
